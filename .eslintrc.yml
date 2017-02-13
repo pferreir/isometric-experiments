@@ -1,0 +1,48 @@
+extends:
+    - "eslint:recommended"
+parserOptions:
+    sourceType: module
+    ecmaFeatures:
+        modules: true
+        experimentalObjectRestSpread: true
+env:
+    amd: true
+    browser: true
+    es6: true
+rules:
+    indent:
+        - error
+        - 4
+        - ObjectExpression: first
+          ArrayExpression: first
+    linebreak-style:
+        - error
+        - unix
+    quotes:
+        - error
+        - single
+        - avoidEscape: true
+    semi:
+        - error
+        - always
+    comma-dangle:
+        - error
+        - never
+    no-cond-assign:
+        - error
+        - always
+    no-console: off
+    object-curly-spacing:
+        - error
+        - never
+    array-bracket-spacing:
+        - error
+        - never
+    space-in-parens:
+        - error
+        - never
+    space-unary-ops:
+        - error
+        - words: true
+          nonwords: false
+    space-infix-ops: error
