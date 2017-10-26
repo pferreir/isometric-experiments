@@ -1,6 +1,13 @@
 /* globals module: false, __dirname: false */
 
-var path = require('path');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: './index.html',
+    filename: 'index.html',
+    inject: 'body'
+})
 
 module.exports = {
     target: 'web',
@@ -37,7 +44,7 @@ module.exports = {
             }
         ]
     },
-
+    plugins: [HtmlWebpackPluginConfig],
     output: {
         path: path.join(__dirname, 'static'),
         sourceMapFilename: '[name].js.map',

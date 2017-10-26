@@ -113,7 +113,7 @@ export class World {
         this.overlay.rotateX(-Math.PI / 2);
         this.addToScene(this.overlay);
 
-        this.viewpointMgr.registerMouseCallback(((obj, face, mousePos) => {
+        this.viewpointMgr.registerMouseCallback(((obj, face) => {
             if (obj == terrain) {
                 const attr = terrain.geometry.getAttribute('position');
                 const x = Math.round((attr.getX(face.a) + attr.getX(face.b) + attr.getX(face.c)) / 12);
@@ -122,7 +122,7 @@ export class World {
             }
         }).bind(this));
 
-        this.viewpointMgr.registerClickCallback(((obj, face, mousePos) => {
+        this.viewpointMgr.registerClickCallback(((obj, face) => {
         }).bind(this));
 
     }
